@@ -14,7 +14,7 @@ project ( Undesktop-AskPass C )
 set ( VERSION "0.1.0" )
 set ( COPYRIGHT "Copyright 2014 Undesktop Project and contributors" )
 set ( DESCRIPTION "Undesktop project AskPass utility" )
-set ( WEBSITE "http://undesktop.plejeck.com/askpass/")
+set ( WEBSITE "http://undesktop.github.io/askpass/" )
 
 
 ### PKGCONFIG ###
