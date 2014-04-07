@@ -25,7 +25,7 @@ class Undesktop.SafePassword : Gtk.Entry, Gtk.Buildable {
 			// Get the colors
 			var context = this.get_style_context();
 			var state = this.get_state_flags();
-			context.add_class(Gtk.STYLE_CLASS_PROGRESSBAR);
+			context.add_class(Gtk.STYLE_CLASS_ENTRY);
 			Gdk.RGBA color_on = context.get_color(state);
 			Gdk.RGBA color_off = context.get_background_color(state);
 //			color_off.alpha = 0.3;
