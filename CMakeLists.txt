@@ -12,9 +12,9 @@ endif ( insource )
 ### PROJECT INFO ###
 project ( Undesktop-AskPass C )
 set ( VERSION "0.1.0" )
-set ( COPYRIGHT "Copyright 2014 Undesktop.org and contributors" )
+set ( COPYRIGHT "Copyright 2014 Undesktop Project and contributors" )
 set ( DESCRIPTION "Undesktop project AskPass utility" )
-set ( WEBSITE "http://undesktop.org/askpass/")
+set ( WEBSITE "http://undesktop.plejeck.com/askpass/")
 
 
 ### PKGCONFIG ###
