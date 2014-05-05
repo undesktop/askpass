@@ -1,58 +1,35 @@
-# Contributing Process
-1. Fork the repo and create a throwaway branch (seriously, don't ever work directly on a long-term
-   branch -- you can thank us later)
-2. If it's a bug, we encourage you to write a regression test
-3. Fix the bug and [make the tests (if any) pass][running-tests]
-4. Send a pull request.
-5. TravisCI will double-check that all your tests pass, and if everything is proper, we'll merge!
+## Filing a Bug Report
+1. **Check that you're up-to-date** with our [latest versions][latest-versions].  Your distro may
+   be outdated.  It might be fixed in the latest version, and it's easy to [compile][compile-guide]
+   and see.
+2. **Tell us your distro!**  They might patch our stuff, so we'll have to check that.
+3. *(optional, but appreciated)* **Tell us your versions of our dependencies.**  Your package
+   manager probably has a means of doing this.
+4. **Tell us how to reproduce the issue.**  Describe what you did to find the bug, so that we can
+   get back there.  We can't get there without a roadmap, and you're the only one who's been there!
+5. **Tell us what you think it should do.**  Tell us what you think is the expected behavior here.
+   If it turns out that it wasn't a bug, we might reassign it as a Usability Report (see below).
+
+[latest-versions]: http://undesktop.github.io/wiki/latest-versions.md
+[compile-guide]: https://github.com/undesktop/askpass/blob/master/build/README.md
+
+## Filing a Feature Request
+1. **Tell us what you want, what you really really want.**  If you wanna be my lover, you gotta get
+   with my friends.  Make it last forever, friendship never ends.
+
+## Filing a Usability Request/Report
+1. **Tell us what it did.**  We need some context for your comments.
+2. **Tell us what it ought to do.**  We'd love to hear what you think it ought to do.  We want to
+   make a great product, and if you're unsatisfied, so are we.
+
+## Filing a Pull Request
+1. **Fork the repo and create a throwaway branch.**  We advise that you don't ever work directly on
+   a long-term branch, just as a general rule.
+2. If it's a bug, we encourage you to **write a regression test.**
+3. **Fix the bug**, [make the tests (if any) pass][running-tests], and double-check your [style
+   ][style-guide].
+4. **Send a pull request.**
+5. TravisCI will confirm that all the tests pass, and if everything is proper, **we'll merge!**
 
 [running-tests]: http://undesktop.github.io/wiki/TODO.html
-
-# Style Guidelines
-## General Style
- * **Indent with tabs, align with spaces.**  Where something is both indented and aligned, use them
-   properly in combination.  This might be confusing in some cases.  For example, the below code
-   block is aligned with the list item (three spaces) then indented within the code, *AFTER* the
-   list item's alignment.
-
-## Code Style
- * **No trailing whitespace.**  This doesn't apply to the newline at the end of the file, which
-   is [a thing from C and Unix][newline-history] and is required by royal decree.
- * **Try to limit yourself to 100 columns.**  We're not *too* harsh on this, it's really just a
-   guideline for when you should start breaking up lines and logic.
- * **Write inline docs for doxygen.**  Use Javadoc style for this, not Qt style.  We may eventually
-   drop Doxygen, because Doxygen is a bloated pile of ass.
- * **Use a modified K&R style for function declarations.**  The main difference is that we put the
-   arguments on their own line for clarity and ease of alignment:
-   ```C
-   int main
-   (int argc, char *argv[])
-   {
-   	/* ... */
-   	while (x == y) {
-   		if (x) {
-   			do_something();
-   		} else {
-   			do_something_else();
-   		}
-   	}
-   }
-   ```
- * **Separate logic and presentation.**  Use classes to build a rough MVC, and then use signals for
-   communication between parts.
-
-[newline-history]: http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline
-
-## Prose Style
- * **Use markdown.**  Don't use anything else, please.  We beg of you.  Nobody understands groff,
-   and LaTeX, while the results are pretty, the input is not.  Just use markdown.
- * **Two spaces after each sentence.**  This is because we mostly work in fixed-width fonts.
- * **Hard wrap to 100 columns.**  We enforce this fairly strictly, with exceptions for links.
- * **Prefer reference-style links.**  They make the source a *lot* more readable.  Put the footnote
-   at the bottom of the section (above the next header)
-
-## Commit Style
- * **Follow [Tim Pope's guide][commit-messages] mostly.** If you want to get fancy, keep it
-   compatible with markdown.  It may not be displayed as markdown, but markdown has pretty code!
-
-[commit-messages]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[style-guide]: http://undesktop.github.io/wiki/style-guide.html
